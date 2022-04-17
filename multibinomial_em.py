@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 logging.basicConfig(level=logging.INFO)
 
 
-class MultiBernoulli:
+class MultiBinomial:
     def __init__(self, pi=[], p=[], size=100):
         self.pi = pi
         self.p = p
@@ -80,7 +80,7 @@ if __name__ == "__main__":
     pi_init = [0.3, 0.3, 0.4]
     p_init = [0.8, 0.1, 0.5]
     
-    b = MultiBernoulli(pi_init, p_init, 50)
+    b = MultiBinomial(pi_init, p_init, 50)
     pi, p = b.EM()
 
     print("pi is {}".format(pi))
